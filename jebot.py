@@ -33,7 +33,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 
 
 Jebot = Client(
-   "Song Downloader",
+   "SHAGGY SONG DOWNLOADER",
    api_id=Config.APP_ID,
    api_hash=Config.API_HASH,
    bot_token=Config.TG_BOT_TOKEN,
@@ -46,7 +46,7 @@ Jebot = Client(
 @Jebot.on_message(filters.private & ~filters.bot & ~filters.command("help") & ~filters.command("start") & ~filters.command("s"))
 async def song(client, message):
  #ImJanindu #JEBotZ
-    cap = "@JEBotZ"
+    cap = "https://t.me/SL_MEDIA_TECH_GRUOP"
     url = message.text
     rkp = await message.reply("Processing...")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
@@ -128,7 +128,7 @@ async def song(client, message):
     
 @Jebot.on_message(filters.command("song") & ~filters.edited & filters.group)
 async def song(client, message):
-    cap = "@JEBotZ"
+    cap = "https://t.me/SL_MEDIA_TECH_GRUOP"
     url = message.text.split(None, 1)[1]
     rkp = await message.reply("Processing...")
     if not url:
@@ -215,7 +215,7 @@ async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Hey There, I'm a Song Downloader Bot. A bot by @JEBotZ.
+               text="""<b>Hey There, I'm a Song Downloader Bot. A bot by SL MEADIA TECH.
 
 Hit help button to find out more about how to use me</b>""",   
                             reply_markup=InlineKeyboardMarkup(
@@ -223,7 +223,7 @@ Hit help button to find out more about how to use me</b>""",
                                         InlineKeyboardButton(
                                             "Help", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Channel", url="https://t.me/Infinity_BOTs")
+                                            "Group", url="https://t.me/SL_MEDIA_TECH_GRUOP")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -276,7 +276,7 @@ print(
     """
 Bot Started!
 
-Join @Infinity_BOTs
+Join Our Group https://t.me/SL_MEDIA_TECH_GRUOP
 """
 )
 
